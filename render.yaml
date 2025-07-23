@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: email-writer-api
+    env: java
+    plan: free
+    rootDir: email-writer-sb
+    buildCommand: ./mvnw package
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: PORT
+        value: 8080
